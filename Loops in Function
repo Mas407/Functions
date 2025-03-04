@@ -1,0 +1,16 @@
+//if you want to add two numbers using loop :: 
+
+#include<iostream>
+using namespace std;
+int sum(int a, int b){
+return a+b;
+}
+int main(){
+	int a,b;
+	for(int i=0; i<=5; i++){
+		cout<<"Enter the value you want to add :: "<<endl;
+		cin>>a>>b;
+		cout<<"Sum of two numbers is : "<<sum(a,b)<<endl;
+	}
+	return 0;
+}
