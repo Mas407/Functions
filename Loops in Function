@@ -14,3 +14,42 @@ int main(){
 	}
 	return 0;
 }
+
+// if you want to get Square using loop in function  ::
+
+#include<iostream>
+using namespace std;
+int square(int a){
+	return a*a;
+}
+int main(){
+	int i;
+int num=num*i;
+for( i=0; i<=10; i++){
+	cout<<"Enter the number ";
+	cin>>num;
+cout<<square(num)<<" "<<endl;
+
+}
+	return 0;	
+}
+
+//if you want to substract two numbers using loops ::
+
+#include<iostream>
+using namespace std;
+int subtract(int a, int b){
+return a-b;
+}
+int main(){
+	int a,b;
+	for(int i=0; i<5; i++){
+		cout<<"Enter two numbers  :: "<<endl;
+		cin>>a>>b;
+		cout<<"Substraction  of two numbers is : "<<subtract(a,b)<<endl;
+	}
+	return 0;
+}
+
+
+
