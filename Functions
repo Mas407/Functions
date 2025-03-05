@@ -1,0 +1,117 @@
+Define:::
+A function is a block of code that performs a specific task. It helps in code reusability, makes the program structured, and improves readability.
+
+
+
+//Function Without Parameters & Without Return Value
+
+
+#include <iostream>
+using namespace std;
+
+void greet() {
+    cout << "Hello, welcome to C++ functions!" << endl;
+}
+
+int main() {
+    greet(); // Function call
+    return 0;
+}
+
+//Function With Parameters & Without Return Value
+
+#include <iostream>
+using namespace std;
+
+void greet() {
+    cout << "Hello, welcome to C++ functions!" << endl;
+}
+
+int main() {
+    greet(); // Function call
+    return 0;
+}
+
+//Function With Parameters & Without Return Value
+
+#include <iostream>
+using namespace std;
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int sum = add(5, 10);
+    cout << "Sum is: " << sum << endl;
+    return 0;
+}
+
+//Pass by Value vs Pass by Reference
+
+a::Pass by Value
+
+#include <iostream>
+using namespace std;
+
+void modify(int x) {
+    x = 100; // Changes will NOT affect original variable
+}
+
+int main() {
+    int num = 10;
+    modify(num);
+    cout << "Value after function call: " << num << endl;
+    return 0;
+}
+
+b::Pass by Reference
+
+#include <iostream>
+using namespace std;
+
+void modify(int &x) {
+    x = 100; // Changes will reflect in the original variable
+}
+
+int main() {
+    int num = 10;
+    modify(num);
+    cout << "Value after function call: " << num << endl;
+    return 0;
+}
+
+// Function Overloading
+
+#include <iostream>
+using namespace std;
+
+void print(int num) {
+    cout << "Integer: " << num << endl;
+}
+void print(double num) {
+    cout << "Double: " << num << endl;
+}
+
+int main() {
+    print(10);   // Calls int version
+    print(3.14); // Calls double version
+    return 0;
+}
+
+//  Recursion
+
+#include <iostream>
+using namespace std;
+
+int factorial(int n) {
+    if (n == 0 || n == 1)
+        return 1;
+    return n * factorial(n - 1);
+}
+
+int main() {
+    int num = 5;
+    cout << "Factorial of " << num << " is " << factorial(num) << endl;
+    return 0;
+}
