@@ -65,5 +65,84 @@ int main(){
 	cout<<avg(a,b);
 	return 0;
 	}
+#include<iostream>
+using namespace std;
+////function
+int main(){
+	//function prototype :: important ha
+	int sum(int ,int );
+	int a,b;//Actual values han means actual amonunt 
+	cout<<"Enter the value : ";
+	cin>>a>>b;
+	cout<<"The sum of the value is :"<<sum(a,b);
+	return 0;
+}
 
+int sum(int a, int b ){
+	return a+b;
+	//formal values han jo actual values ko use kar rahi han 
+}
+call by value or call by reference :: 
+call by value
+void swap(int x,int y){
+	
+	int temp =x;
+	x=y;
+	y=temp;
+}
+void swappointers(int* x,int* y){
+	
+	int temp =*x;
+	*x=*y;
+	*y=temp;
+}
+void swapreference(int & x,int & y){
+	
+	int temp =x;
+	x=y;
+	y=temp;
+}
+int main(){
+	int a,b;
+	cout<<"Enter the number : ";
+	cin>>a>>b;
+	cout<<"The value of a is "<<a<<" and b is "<<b<<endl;
+	swapreference(a,b);
+	cout<<"The value of a is "<<a<<" and b is "<<b;
+}
+  inline int fun(int a, int b){
+ {Jab static variable use ho to inline function use nhi karna ::
+	static int c=0;
+	c=c+1;
+	return a*b+1;
+}
+float money(int invest, float profit=1.04){
 
+return invest*profit;
+}//yaha pa jo value hm na phala he rakh de ha na ka ya profit ho ga wahi default value ha 
+ int main(){
+	 int a,b;
+	cout<<"Enter the number : ";
+	cin>>a>>b;
+	int mon=100;
+	
+	cout<<"If you have "<<mon<<" rupees in your account you can earn a profit "<<money(mon)<<" in 1 year ";
+	
+	cout<<"The product of the number is : "<<fun(a,b)<<endl;
+	cout<<"The product of the number is : "<<fun(a,b)<<endl;
+	cout<<"The product of the number is : "<<fun(a,b)<<endl;
+	cout<<"The product of the number is : "<<fun(a,b)<<endl;
+	cout<<"The product of the number is : "<<fun(a,b)<<endl;
+	cout<<"The product of the number is : "<<fun(a,b)<<endl;
+	
+	
+	return 0;
+}
+float fun(int invest, float profit=1.04){
+	return invest*profit;
+}
+int main(){
+	int a=100;
+	cout<<"If you invest a "<<a<<" rupee you will earn a profit "<<fun(a)<<" in a one year inshallaha ";
+	return 0;
+}
