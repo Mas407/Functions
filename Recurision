@@ -1,0 +1,44 @@
+//IF you want to get the Factorial of Small Numbers : : 
+
+#include<iostream>
+using namespace std;
+
+int factorial(int n){
+	if(n==0)
+	return 1;
+	else
+	return n*factorial(n-1);
+}
+int main(){
+	int n;
+	cout<<"Enter the number :: ";
+	cin>>n;
+	cout<<"The Factorial of the number is  ::  "<<factorial(n);
+	return 0;
+}
+
+
+//This program give you the maximum value factorial but small value will be confortable
+
+#include<iostream>
+using namespace std;
+unsigned long long factorial(int n) {
+    unsigned long long fact = 1;
+    for(int i = 1; i <= n; i++) {
+        fact *= i;
+    }
+    return fact;
+}
+int main() {
+    int n;
+    cout << "Enter the number :: ";
+    cin >> n;
+    if(n < 0) {
+        cout << "Factorial of negative numbers is not defined.";
+    } else if(n > 20) {  
+        cout << "Number is too large for accurate calculation.";
+    } else {
+        cout << "The Factorial of the number is  ::  " << factorial(n);
+    }
+    return 0;
+}
